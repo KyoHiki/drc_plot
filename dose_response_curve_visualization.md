@@ -10,7 +10,7 @@ Kyoshiro HIKI
 ``` r
 require(tidyverse)
 
-# An example dataset
+# An example dataset　適当
 surv <- read.table(textConnection("
 0   1   2 8 10
 0   2   1 9 10
@@ -87,6 +87,7 @@ axis.break(axis=1,3, style="slash",brw=0.05)
 
 # Add mean and SD
 # Similar vizualization can be done also by stat_summary in ggplot2
+# より洗練された作図はggplot2で実施してくだされ
 surv2 <- surv #just for visualization
 surv2[surv2[,"Concentration"]==0,"Concentration"]<- rep(1,5)
 
@@ -108,6 +109,7 @@ Controlとの致死率の有意差について仮説検定
 # LC50 estimation
 require(multcomp)
 
+# Dunnett's検定によりControlとの比較
 surv$Concentration <- as.factor(surv$Concentration)
 fit <- glm(formula=cbind (Total-Dead, Dead) ~ Concentration, data=surv, family=binomial (link="logit"))
 summary (glht (fit, linfct=mcp (Concentration="Dunnett"), alternative="less"))   # alternative="less"はone-sided の検定

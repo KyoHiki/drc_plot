@@ -1,4 +1,4 @@
-## データの読み込み
+## ライブラリの読み込み
 
     require(ggplot2)
     require(ggprism)
@@ -47,7 +47,7 @@
       merge(data_cdiss , all=TRUE) %>% 
       pivot_wider (names_from=Type,values_from=Cdiss,names_prefix="Cdiss_") 
 
-    ## model estimation
+  ## モデル推定
     # mean_surv_ctrl <- CPS_sed %>% filter(Nominal==0) %>% summarise(mean=mean(Survival/Total))
 
     model_sed_cfree_pore <- drm(Dead/Total~Cfree_Pore, data=Flu_sed, type="binomial", weights=Total, fct = LL.2() )

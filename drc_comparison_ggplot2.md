@@ -109,7 +109,7 @@
 
 
 
-    ## Plot
+  ## お絵描き
     Figure_flu <- Fits %>%
       mutate(label= fct_relevel(label,"Cdiss,pore","Cfree,pore","Cdiss,over","Cfree,over","Cdiss,water"))%>%
       mutate(lty = ifelse(Type=="italic(C)[free]" & label=="Cdiss,water", "dotted","solid")) %>%

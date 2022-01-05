@@ -1,5 +1,5 @@
 ```{r setup, include=FALSE,message=FALSE,error=FALSE}
- knitr::opts_chunk$set(echo = TRUE, message=FALSE,warning=FALSE, fig.path = "figures/") #echo=TRUE
+ knitr::opts_chunk$set(echo = TRUE, message=FALSE,warning=FALSE, fig.path = "figure/") #echo=TRUE
 ```
 
 ```{r read.library, warning=FALSE}

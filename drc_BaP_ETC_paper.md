@@ -1,10 +1,5 @@
 ## The R code below is used to reproduce Figure 5 in Hiki et al. (2021, ET&C; DOI: 10.1002/etc.5199).
 
-```{r setup, include=FALSE,message=FALSE,error=FALSE}
- knitr::opts_chunk$set(echo = TRUE, message=FALSE,warning=FALSE, fig.path = "figure/") #echo=TRUE
-```
-
-```{r read.library, warning=FALSE}
 require(ggplot2)
 require(ggsci)
 require(ggsignif)
@@ -21,11 +16,7 @@ require(lemon)
 require(drc)
 require(plotrix)
 require(scales)
-```
 
-
-
-```{r read.bap, warning=FALSE}
 ### read data: BaP
 data_surv_norm <- read.csv("data_surv_normalized_BaP.csv", )
 

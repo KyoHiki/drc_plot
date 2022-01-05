@@ -1,23 +1,23 @@
 # The R code below is used to reproduce Figure 5 in Hiki et al. (2021, ET&C; DOI: 10.1002/etc.5199).
   
     
-      
-require(ggplot2)  
-require(ggsci)  
-require(ggsignif)  
-require(ggprism)  
-require(cowplot)  
-require(ggpubr)  
-require(ggExtra)  
-require(gridExtra)  
-require(grid)  
-require(tidyverse)  
-require(EnvStats)  
-require(ggpubr)  
-require(lemon)  
-require(drc)  
-require(plotrix)  
-require(scales)  
+``` r
+  require(ggplot2)  
+  require(ggsci)  
+  require(ggsignif)  
+  require(ggprism)  
+  require(cowplot)  
+  require(ggpubr)  
+  require(ggExtra)  
+  require(gridExtra)  
+  require(grid)  
+  require(tidyverse)  
+  require(EnvStats)  
+  require(ggpubr)  
+  require(lemon)  
+  require(drc)  
+  require(plotrix)  
+  require(scales)  
 
 ### read data: BaP
 data_surv_norm <- read.csv("data_surv_normalized_BaP.csv", )  
@@ -33,9 +33,9 @@ model_surv <- drm(Dead/Total~Csed_norm, data=data_surv_norm, type="binomial", we
 Conc <- expand.grid(Conc=exp(seq(log(10^2.5), log(10^4.5), length=1000)))   
   
 Pred_surv <- predict(model_surv, newdata=Conc, interval="confidence") %>%  
-  cbind(Conc)   
+   cbind(Conc)   
 Mean_surv <- model_surv$data %>% dplyr::select(Csed_norm,"Dead/Total") %>%  
-  rename(Mortality="Dead/Total")   
+   rename(Mortality="Dead/Total")   
   
   
 ## Plot: survival BaP 
@@ -65,9 +65,11 @@ Figure_BaP <- ggplot(Pred_surv) +
   
 tiff("Figure_BaP.tiff", units="in", width=6, height=6, res=300)   
 Figure_BaP  
+``` 
 ![](figure/Figure_BaP.png)    
+``` r
 dev.off()    
-  
+ ``` 
   
 
 

@@ -1,10 +1,3 @@
----
-title: "10 days Survival test: Chlorpyrifos"
-author: "Kyoshiro HIKI"
-date: "20200313"
-output: markdown_document
----
-
 ```{r setup, include=FALSE,message=FALSE,error=FALSE}
  knitr::opts_chunk$set(echo = TRUE, message=FALSE,warning=FALSE, fig.path = "figures/figure_") #echo=TRUE
 ```

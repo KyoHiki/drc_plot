@@ -66,7 +66,7 @@ Figure_BaP <- ggplot(Pred_surv) +
   annotate("text",label="**",x=15500,y=0.71,size=7)+
   ggtitle("BaP")
 
-
+Figure_BaP
 
 tiff("Figure_BaP.tiff", units="in", width=6, height=6, res=300)
 Figure_BaP

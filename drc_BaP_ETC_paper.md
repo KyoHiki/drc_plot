@@ -1,8 +1,5 @@
-The R code below is used to reproduce Figure 5 in Hiki et al. (2021, ET&C; DOI: 10.1002/etc.5199).
-------------------------------------------------
-  
-    </br>
-    </br>
+## The R code below is used to reproduce Figure 5 in Hiki et al. (2021, ET&C; DOI: 10.1002/etc.5199).
+
 ```{r setup, include=FALSE,message=FALSE,error=FALSE}
  knitr::opts_chunk$set(echo = TRUE, message=FALSE,warning=FALSE, fig.path = "figure/") #echo=TRUE
 ```
@@ -71,11 +68,13 @@ Figure_BaP <- ggplot(Pred_surv) +
   annotate("text",label="**",x=15500,y=0.71,size=7)+
   ggtitle("BaP")
 
-Figure_BaP
+
 
 tiff("Figure_BaP.tiff", units="in", width=6, height=6, res=300)
 Figure_BaP
+![](figure/Figure_BaP.png)
 dev.off()
+
 
 ```
 

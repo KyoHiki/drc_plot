@@ -19,7 +19,6 @@ require(lemon)
 require(drc)
 require(plotrix)
 require(scales)
-
 ```
 
 

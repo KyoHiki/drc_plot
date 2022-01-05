@@ -1,5 +1,7 @@
-## The R code below is used to reproduce Figure 5 in Hiki et al. (2021, ET&C; DOI: 10.1002/etc.5199).
-
+# The R code below is used to reproduce Figure 5 in Hiki et al. (2021, ET&C; DOI: 10.1002/etc.5199).
+  
+    
+      
 require(ggplot2)  
 require(ggsci)  
 require(ggsignif)  
@@ -21,12 +23,12 @@ require(scales)
 data_surv_norm <- read.csv("data_surv_normalized_BaP.csv", )  
   
   
-## fitting
+### fitting
 model_surv <- drm(Dead/Total~Csed_norm, data=data_surv_norm, type="binomial", weights=Total, fct = LL.2() )  
   
   
   
-## preparation for figure: regression curve
+### preparation for figure: regression curve
 ### ggplotで描画するために回帰曲線を引き直す。drmで求めた回帰パラメータを使用。
 Conc <- expand.grid(Conc=exp(seq(log(10^2.5), log(10^4.5), length=1000)))   
   

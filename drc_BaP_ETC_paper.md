@@ -3,6 +3,8 @@ The R code below is used to reproduce Figure 5 in Hiki et al. (2021, ET&C; DOI: 
   
   
     
+    <br>
+    <br>
 ```{r setup, include=FALSE,message=FALSE,error=FALSE}
  knitr::opts_chunk$set(echo = TRUE, message=FALSE,warning=FALSE, fig.path = "figure/") #echo=TRUE
 ```

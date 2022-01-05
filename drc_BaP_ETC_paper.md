@@ -68,7 +68,7 @@ Figure_BaP <- ggplot(Pred_surv) +
 
 
 
-tiff("Figure_drc_BaP_sed.tiff", units="in", width=6, height=6, res=300)
+tiff("Figure_BaP.tiff", units="in", width=6, height=6, res=300)
 Figure_BaP
 dev.off()
 
